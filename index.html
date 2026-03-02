@@ -114,11 +114,10 @@ button:focus-visible {
 <body>
 
     <div id="home">
-        <h1>SELEZIONA UN�OPZIONE</h1>
+        <h1>SELEZIONA UN’OPZIONE</h1>
         <button class="btn" onclick="mostraSezione('farmaci')">Farmaci</button>
-        <button class="btn" onclick="mostraSezione('procedure')">Procedure</button>
         <button class="btn" onclick="mostraSezione('parametri-vitali')">Parametri vitali</button>
-        <button class="btn" onclick="MostraSezione ('Device')">Device</button>
+
     </div>
 
     <div id="farmaci" class="hidden">
@@ -129,7 +128,7 @@ button:focus-visible {
         <button class="btn" onclick="mostraScheda('atropina')">Atropina</button>
         <button class="btn" onclick="mostraScheda('breva')">Breva + Clenil</button>
         <button class="btn" onclick="mostraScheda('diazepam')">Diazepam</button>
-        <button class="btn" onclick="mostraScheda('elettricita')">Elettricit� ?</button>
+        <button class="btn" onclick="mostraScheda('elettricita')">Elettricità ⚡</button>
         <button class="btn" onclick="mostraScheda('fentanile')">Fentanile</button>
         <button class="btn" onclick="mostraScheda('glucagone')">Glucagone</button>
         <button class="btn" onclick="mostraScheda('idrocortisone')">Idrocortisone</button>
@@ -144,27 +143,19 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
         <button class="btn" onclick="mostraScheda('paracetamolo')">Paracetamolo EV</button>
         <button class="btn" onclick="mostraScheda('rocuronio')">Rocuronio</button>
         <button class="btn" onclick="mostraScheda('succinilcolina')">Succinilcolina</button>
-        <button class="btn back" onclick="tornaHome()">? Home</button>
-    </div>
-
-    <div id="procedure" class="hidden">
-        <h1>Procedure</h1>
-        <button class="btn" onclick="mostraScheda('dolore')">Dolore toracico</button>
-        <button class="btn" onclick="mostraScheda('convulsioni')">Convulsioni</button>
-        <button class="btn" onclick="mostraScheda('asma')">Asma</button>
-        <button class="btn back" onclick="tornaHome()">? Home</button>
+        <button class="btn back" onclick="tornaHome()">🏠 Home</button>
     </div>
     
     <div id="parametri-vitali" class="hidden">
-        <h1>Parametri Vitali ?</h1>
+        <h1>Parametri Vitali 🩺</h1>
         <div class="scheda">
-            <h3>Inserisci l'Et� del Paziente</h3>
+            <h3>Inserisci l'Età del Paziente</h3>
             
-            <label for="inputEta" style="display: block; margin-bottom: 5px;">Et� (solo numero):</label>
+            <label for="inputEta" style="display: block; margin-bottom: 5px;">Età (solo numero):</label>
             <input type="number" id="inputEta" placeholder="Es: 4" min="0" style="width: 100px;">
             
             <div style="margin-top: 10px;">
-                <label>Unit�:</label>
+                <label>Unità:</label>
                 <input type="radio" id="unitaAnni" name="unitaEta" value="anni" checked> 
                 <label for="unitaAnni">Anni</label>
                 <input type="radio" id="unitaMesi" name="unitaEta" value="mesi" style="margin-left: 15px;"> 
@@ -176,7 +167,7 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
             <div id="risultatoParametri" class="risultato hidden" style="text-align: left; margin-top: 30px; padding: 15px;">
                 </div>
         </div>
-        <button class="btn back" onclick="tornaHome()">? Home</button>
+        <button class="btn back" onclick="tornaHome()">🏠 Home</button>
     </div>
     <div id="schede" class="hidden">
         
@@ -184,8 +175,8 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
             <h1>Adenosina</h1>
             <p><b>Indicazioni:</b> Tachicardie parossistiche sopraventricolari.</p>
             <p>Seleziona la dose:</p>
-            <button class="btn" onclick="mostraDoseAdenosina(1)">1� dose</button>
-            <button class="btn" onclick="mostraDoseAdenosina(2)">2� dose</button>
+            <button class="btn" onclick="mostraDoseAdenosina(1)">1ª dose</button>
+            <button class="btn" onclick="mostraDoseAdenosina(2)">2ª dose</button>
             <div id="doseAdenosina" class="risultato hidden"></div>
             <div id="calcoloPesoAdenosina1" class="hidden">
                 <input type="number" id="pesoAdenosina1" placeholder="Peso (kg)" min="1">
@@ -197,7 +188,7 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
                 <button class="btn" onclick="calcolaAdenosina(2)">Calcola Dose (0,2 mg/kg)</button>
                 <div id="risultatoAdenosina2" class="risultato hidden"></div>
             </div>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
         
         <div id="adrenalina" class="scheda hidden">
@@ -218,7 +209,7 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
             </div>
             <div id="anafilassiAdrenalina" class="hidden" style="margin-top: 20px;">
                 <h3>Anafilassi - Dosaggio IM (Intramuscolo)</h3>
-                <h4>Dosaggio Standard per Fascia d'Et�:</h4>
+                <h4>Dosaggio Standard per Fascia d'Età:</h4>
                 <ul>
                     <li>Fino a 6 anni: 150 mcg (0,15 mg) IM</li>
                     <li>Tra 6 e 12 anni: 300 mcg (0,3 mg) IM</li>
@@ -229,7 +220,7 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
                 <input type="number" id="pesoAnafilassi" placeholder="Peso (kg)" min="1">
                 <button class="btn" onclick="calcolaAdrenalina('anafilassi')">Calcola Dose (Anafilassi IM)</button>
                 <div id="risultatoAnafilassi" class="risultato hidden"></div>
-                <p>Note: La dose pu� essere ripetuta dopo 5-15 minuti se necessario.</p>
+                <p>Note: La dose può essere ripetuta dopo 5-15 minuti se necessario.</p>
             </div>
             <div id="croupAdrenalina" class="hidden" style="margin-top: 20px;">
                 <h3>Croup (Laringite Stridula)</h3>
@@ -241,7 +232,7 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
                 <div id="risultatoCroup" class="risultato hidden"></div>
                 <p>Note: Monitorare per 2-3 ore dopo la somministrazione.</p>
             </div>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
         
         <div id="amiodarone" class="scheda hidden">
@@ -253,7 +244,7 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
             <button class="btn" onclick="calcolaAmiodarone()">Calcola Dose</button>
             <div id="risultatoAmiodarone" class="risultato hidden"></div>
             <p>Note: Somministrare lentamente (in 20-60 minuti), eccetto in caso di arresto cardiaco (bolo rapido).</p>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
         
         <div id="atropina" class="scheda hidden">
@@ -264,7 +255,7 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
             <input type="number" id="pesoAtropina" placeholder="Peso (kg)" min="1">
             <button class="btn" onclick="calcolaAtropina()">Calcola Dose</button>
             <div id="risultatoAtropina" class="risultato hidden"></div>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
         
         <div id="breva" class="scheda hidden">
@@ -287,8 +278,8 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
             <input type="number" id="pesoBreva" placeholder="Peso (kg)" min="1">
             <button class="btn" onclick="calcolaBreva()">Calcola Dosaggio</button>
             <div id="risultatoBreva" class="risultato hidden"></div>
-            <p>Note: Il dosaggio � da somministrare in aerosol, diluito in soluzione fisiologica (es. 2-3 mL).</p>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <p>Note: Il dosaggio è da somministrare in aerosol, diluito in soluzione fisiologica (es. 2-3 mL).</p>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
         
         <div id="diazepam" class="scheda hidden">
@@ -300,7 +291,7 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
             <button class="btn" onclick="calcolaDiazepam()">Calcola Dose</button>
             <div id="risultatoDiazepam" class="risultato hidden"></div>
             <p>Note: Monitorare la respirazione, rischio di depressione respiratoria. Somministrare lentamente.</p>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
         
         <div id="fentanile" class="scheda hidden">
@@ -311,8 +302,8 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
             <input type="number" id="pesoFentanile" placeholder="Peso (kg)" min="1">
             <button class="btn" onclick="calcolaFentanile()">Calcola Dose</button>
             <div id="risultatoFentanile" class="risultato hidden"></div>
-            <p>Note: Somministrare lentamente. Rischio di depressione respiratoria e rigidit� toracica.</p>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <p>Note: Somministrare lentamente. Rischio di depressione respiratoria e rigidità toracica.</p>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
 
         <div id="glucagone" class="scheda hidden">
@@ -327,7 +318,7 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
             <input type="number" id="pesoGlucagone" placeholder="Peso (kg)" min="1">
             <button class="btn" onclick="calcolaGlucagone()">Calcola Dose</button>
             <div id="risultatoGlucagone" class="risultato hidden"></div>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
 
         <div id="idrocortisone" class="scheda hidden">
@@ -338,8 +329,8 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
             <input type="number" id="pesoIdrocortisone" placeholder="Peso (kg)" min="1">
             <button class="btn" onclick="calcolaIdrocortisone()">Calcola Dose</button>
             <div id="risultatoIdrocortisone" class="risultato hidden"></div>
-            <p>Note: La dose massima � 200 mg.</p>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <p>Note: La dose massima è 200 mg.</p>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
 
         <div id="ketamina" class="scheda hidden">
@@ -366,7 +357,7 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
                 <button class="btn" onclick="calcolaKetamina('sedazione', 'ev')">Calcola Dose EV (1-2 mg/kg)</button>
                 <div id="risultatoKetaminaSedazione" class="risultato hidden"></div>
             </div>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
 
         <div id="lidocaina" class="scheda hidden">
@@ -377,8 +368,8 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
             <input type="number" id="pesoLidocaina" placeholder="Peso (kg)" min="1">
             <button class="btn" onclick="calcolaLidocaina()">Calcola Dose</button>
             <div id="risultatoLidocaina" class="risultato hidden"></div>
-            <p>Note: La fiala standard � da 10 mg/mL (1%).</p>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <p>Note: La fiala standard è da 10 mg/mL (1%).</p>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
         
          <div id="Liquidi" class="scheda hidden">
@@ -390,26 +381,26 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
             <button class="btn" onclick="calcolaLiquidi()">Calcola Dose</button>
             <div id="risultatoLiquidi" class="risultato hidden"></div>
             <p></p>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
 
         <div id="metilprednisolone" class="scheda hidden">
             <h1>Metilprednisolone</h1>
             <p><b>Indicazioni:</b> Asma grave, shock anafilattico, insufficienza surrenalica.</p>
-            <h3 style="text-decoration: underline;">Dosaggio in base a Et� e Peso</h3>
+            <h3 style="text-decoration: underline;">Dosaggio in base a Età e Peso</h3>
             <ul>
                 <li>Fino a 2 anni: 2 mg/kg (max 20 mg)</li>
                 <li>2-5 anni: 2 mg/kg (max 30 mg)</li>
                 <li>6-11 anni: 1 - 2 mg/kg (max 40 mg)</li>
                 <li>> 11 anni e Adulti: 1 mg/kg (max 50 mg)</li>
             </ul>
-            <p>Inserisci Peso e Et� per il calcolo:</p>
+            <p>Inserisci Peso e Età per il calcolo:</p>
             <input type="number" id="pesoMetilprednisolone" placeholder="Peso (kg)" min="1">
-            <input type="number" id="etaMetilprednisolone" placeholder="Et� (anni)" min="0">
+            <input type="number" id="etaMetilprednisolone" placeholder="Età (anni)" min="0">
             <button class="btn" onclick="calcolaMetilprednisolone()">Calcola Dose</button>
             <div id="risultatoMetilprednisolone" class="risultato hidden"></div>
-            <p>Note: Somministrare EV. La dose pu� essere ripetuta.</p>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <p>Note: Somministrare EV. La dose può essere ripetuta.</p>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
         
         <div id="midazolam" class="scheda hidden">
@@ -449,7 +440,7 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
                     <div id="risultatoMidazolamSed" class="risultato hidden"></div>
                 </div>
             </div>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
         
         <div id="morfina" class="scheda hidden">
@@ -461,7 +452,7 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
             <button class="btn" onclick="calcolaMorfina()">Calcola Dose</button>
             <div id="risultatoMorfina" class="risultato hidden"></div>
             <p>Note: Somministrare lentamente. Rischio di depressione respiratoria.</p>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
         
         <div id="naloxone" class="scheda hidden">
@@ -472,9 +463,9 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
             <input type="number" id="pesoNaloxone" placeholder="Peso (kg)" min="1">
             <button class="btn" onclick="calcolaNaloxone()">Calcola Dose</button>
             <div id="risultatoNaloxone" class="risultato hidden"></div>
-            <p>Note: La fiala standard � di 0,4 mg. Dose massima iniziale 1 fiala (0,4 mg).
+            <p>Note: La fiala standard è di 0,4 mg. Dose massima iniziale 1 fiala (0,4 mg).
             Ripetibile ogni 2-3 minuti fino a risoluzione.</p>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
 
         <div id="paracetamolo" class="scheda hidden">
@@ -490,35 +481,35 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
             <button class="btn" onclick="calcolaParacetamolo()">Calcola Dose</button>
             <div id="risultatoParacetamolo" class="risultato hidden"></div>
             <p>Note: Non superare la dose massima giornaliera e l'intervallo minimo di 6 ore tra le somministrazioni.</p>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
         
         <div id="rocuronio" class="scheda hidden">
             <h1>Rocuronio</h1>
-            <p><b>Indicazioni:</b> Intubazione a sequenza rapida (RSI) � blocco neuromuscolare.</p>
+            <p><b>Indicazioni:</b> Intubazione a sequenza rapida (RSI) – blocco neuromuscolare.</p>
             <p>Dosaggio: 0,6 - 1,2 mg/kg EV.</p>
             <p>Calcola la dose in base al peso (kg):</p>
             <input type="number" id="pesoRocuronio" placeholder="Peso (kg)" min="1">
             <button class="btn" onclick="calcolaRocuronio()">Calcola Range Dose</button>
             <div id="risultatoRocuronio" class="risultato hidden"></div>
             <p>Note: Tempo per raggiungimento della curarizzazione: 60-70 secondi</p>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
 
         <div id="succinilcolina" class="scheda hidden">
             <h1>Succinilcolina</h1>
-            <p><b>Indicazioni:</b> Intubazione a sequenza rapida (RSI) � blocco neuromuscolare a breve durata.</p>
+            <p><b>Indicazioni:</b> Intubazione a sequenza rapida (RSI) – blocco neuromuscolare a breve durata.</p>
             <p><b>Dosaggio:</b> 1 - 2 mg/kg EV.</p>
             <p>Calcola la dose in base al peso:</p>
             <input type="number" id="pesoSuccinilcolina" placeholder="Peso (kg)" min="1">
             <button class="btn" onclick="calcolaSuccinilcolina()">Calcola Dose</button>
             <div id="risultatoSuccinilcolina" class="risultato hidden"></div>
-            <p>Note: Insorgenza 30�60 secondi. Durata d�azione 5�10 minuti.</p>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
+            <p>Note: Insorgenza 30–60 secondi. Durata d’azione 5–10 minuti.</p>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
 
         <div id="elettricita" class="scheda hidden">
-            <h1>Elettricit� ?</h1>
+            <h1>Elettricità ⚡</h1>
             <p><b>Indicazioni:</b> Defibrillazione e Cardioversione</p>
             <div id="menuElettricita" style="margin-top: 20px;">
                 <button id="btnDefibrillazione" class="btn btn-sottomenu" onclick="mostraTipoElettricita('defibrillazione')">Defibrillazione</button>
@@ -538,37 +529,15 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
                 <h3>Cardioversione Sincronizzata (Scarica Sincronizzata)</h3>
                 <p><b>Indicazioni:</b> Tachiaritmia con polso (es. TSV) non responsiva ai farmaci.</p>
                 <ul>
-                    <li>1� Scarica: 0,5 - 1 J/kg</li>
-                    <li>2� Scarica (Se Inefficace): 2 J/kg</li>
+                    <li>1ª Scarica: 0,5 - 1 J/kg</li>
+                    <li>2ª Scarica (Se Inefficace): 2 J/kg</li>
                 </ul>
                 <p>Calcola la dose in base al peso (kg):</p>
                 <input type="number" id="pesoCardioversione" placeholder="Peso (kg)" min="1">
                 <button class="btn" onclick="calcolaCardioversione()">Calcola Scariche</button>
                 <div id="risultatoCardioversione" class="risultato hidden"></div>
             </div>
-            <button class="btn back" onclick="mostraSezione('farmaci')">? Torna a Farmaci</button>
-        </div>
-
-        <div id="dolore" class="scheda hidden">
-            <h1>Dolore toracico</h1>
-            <p>Valutazione: ECG, saturazione, PA, anamnesi, troponina.</p>
-            <p>Gestione iniziale: O2 se SpO? &lt;94%, ASA 300 mg PO, 
-            nitrato EV se indicato.</p>
-            <button class="btn back" onclick="mostraSezione('procedure')">? Torna a Procedure</button>
-        </div>
-        
-        <div id="convulsioni" class="scheda hidden">
-            <h1>Convulsioni</h1>
-            <p>Valutazione: vie aeree, ossigenazione, glicemia capillare.</p>
-            <p>Gestione iniziale: Diazepam 0,2�0,5 mg/kg EV o rettale.</p>
-            <button class="btn back" onclick="mostraSezione('procedure')">? Torna a Procedure</button>
-        </div>
-        
-        <div id="asma" class="scheda hidden">
-            <h1>Asma</h1>
-            <p>Valutazione: Dispnea, sibilo, saturazione, frequenza respiratoria.</p>
-            <p>Trattamento iniziale: Salbutamolo aerosol, O?, cortisonici EV o PO.</p>
-            <button class="btn back" onclick="mostraSezione('procedure')">? Torna a Procedure</button>
+            <button class="btn back" onclick="mostraSezione('farmaci')">🏠 Torna a Farmaci</button>
         </div>
         
     </div>
@@ -580,7 +549,7 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
         
         function nascondiTutto() {
             // AGGIUNTO #parametri-vitali alla lista degli elementi da nascondere
-            document.querySelectorAll('#home, #farmaci, #procedure, #parametri-vitali, #schede, #schede > div').forEach(el => 
+            document.querySelectorAll('#home, #farmaci, #parametri-vitali, #schede, #schede > div').forEach(el => 
             el.classList.add('hidden'));
         }
 
@@ -661,7 +630,7 @@ onclick="mostraScheda('metilprednisolone')">Metilprednisolone</button>
                 document.getElementById('risultatoMetilprednisolone').classList.add('hidden'); 
             }
             if (id === 'elettricita') { 
-                nascondiTipiElettricita(); // Nasconde i sottomenu di elettricit� 
+                nascondiTipiElettricita(); // Nasconde i sottomenu di elettricità 
                 document.getElementById('pesoDefibrillazione').value = '';
                 document.getElementById('pesoCardioversione').value = ''; 
             }
@@ -679,7 +648,7 @@ function calcolaParametriVitali() {
     const eta = parseFloat(inputEta);
 
     if (isNaN(eta) || eta < 0) {
-        risultatoDiv.innerHTML = "?? Inserisci un'et� valida (numero positivo).";
+        risultatoDiv.innerHTML = "⚠️ Inserisci un'età valida (numero positivo).";
         risultatoDiv.classList.remove('hidden');
         return;
     }
@@ -704,7 +673,7 @@ function calcolaParametriVitali() {
     } else if (etaInMesi <= 12) { // 1 mese - 1 anno
         paSistolicaMinima = "70 mmHg";
     } else { // > 1 anno
-        // Formula: 70 + (2 x et� in anni)
+        // Formula: 70 + (2 x età in anni)
         let paCalcolata = 70 + (2 * etaInAnni);
         paSistolicaMinima = `Minima ${Math.round(paCalcolata)} mmHg (Formula: 70 + 2 x Anni)`;
     }
@@ -737,7 +706,7 @@ function calcolaParametriVitali() {
     
     // Generazione della tabella dei risultati
     risultatoDiv.innerHTML = `
-        <h4 style="margin-top: 0; text-decoration: underline;">Range Et�: ${categoriaVisualizzata}</h4>
+        <h4 style="margin-top: 0; text-decoration: underline;">Range Età: ${categoriaVisualizzata}</h4>
         <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
             <tr>
                 <td style="font-weight: bold;">Frequenza Respiratoria:</td>
@@ -786,7 +755,7 @@ function calcolaParametriVitali() {
             const maxDose = doseNum === 1 ? 6 : 12;
 
             if(isNaN(peso) || peso <= 0) { 
-                risultatoDiv.textContent="?? Inserisci un peso valido."; 
+                risultatoDiv.textContent="⚠️ Inserisci un peso valido."; 
                 risultatoDiv.classList.remove('hidden'); 
                 return; 
             }
@@ -795,7 +764,7 @@ function calcolaParametriVitali() {
             let doseFinale = Math.min(doseCalcolata, maxDose);
             let nota = doseCalcolata > maxDose ? ` (Dose massima ${maxDose} mg applicata)` : '';
             
-            risultatoDiv.textContent = `? Dose Adenosina (${doseNum}�): ${doseFinale.toFixed(2)} mg EV rapido${nota}`;
+            risultatoDiv.textContent = `💉 Dose Adenosina (${doseNum}ª): ${doseFinale.toFixed(2)} mg EV rapido${nota}`;
             risultatoDiv.classList.remove('hidden');
         }
 
@@ -857,7 +826,7 @@ function calcolaParametriVitali() {
             const risultatoDiv = document.getElementById(risultatoDivId);
 
             if(isNaN(peso) || peso <= 0) { 
-                risultatoDiv.textContent="?? Inserisci un peso valido."; 
+                risultatoDiv.textContent="⚠️ Inserisci un peso valido."; 
                 risultatoDiv.classList.remove('hidden'); 
                 return; 
             }
@@ -866,7 +835,7 @@ function calcolaParametriVitali() {
             let doseFinale = Math.min(doseCalcolata, maxDose);
             let nota = doseCalcolata > maxDose ? ` (Dose massima ${maxDose} mg applicata)` : '';
             
-            risultatoDiv.textContent = `? Dose Adrenalina (${viaMsg}): ${doseFinale.toFixed(2)} mg${nota}`;
+            risultatoDiv.textContent = `💉 Dose Adrenalina (${viaMsg}): ${doseFinale.toFixed(2)} mg${nota}`;
             risultatoDiv.classList.remove('hidden');
         }
 
@@ -877,13 +846,13 @@ function calcolaParametriVitali() {
             const fattoreDose = 5; // 5 mg/kg
 
             if(isNaN(peso) || peso <= 0) { 
-                risultatoDiv.textContent="?? Inserisci un peso valido.";
+                risultatoDiv.textContent="⚠️ Inserisci un peso valido.";
                 risultatoDiv.classList.remove('hidden'); 
                 return; 
             }
 
             let dose = peso * fattoreDose;
-            risultatoDiv.textContent = `? Dose Amiodarone: ${dose.toFixed(0)} mg EV`; 
+            risultatoDiv.textContent = `💉 Dose Amiodarone: ${dose.toFixed(0)} mg EV`; 
             risultatoDiv.classList.remove('hidden');
         }
 
@@ -896,7 +865,7 @@ function calcolaParametriVitali() {
             const maxDoseBambini = 0.5;
 
             if(isNaN(peso) || peso <= 0) { 
-                risultatoDiv.textContent="?? Inserisci un peso valido.";
+                risultatoDiv.textContent="⚠️ Inserisci un peso valido.";
                 risultatoDiv.classList.remove('hidden'); 
                 return; 
             }
@@ -912,7 +881,7 @@ function calcolaParametriVitali() {
                 nota = ` (Dose massima pediatrica ${maxDoseBambini.toFixed(1)} mg applicata)`;
             }
 
-            risultatoDiv.textContent = `? Dose Atropina: ${doseFinale.toFixed(2)} mg EV${nota}`; 
+            risultatoDiv.textContent = `💉 Dose Atropina: ${doseFinale.toFixed(2)} mg EV${nota}`; 
             risultatoDiv.classList.remove('hidden');
         }
 
@@ -922,7 +891,7 @@ function calcolaParametriVitali() {
             const risultatoDiv = document.getElementById('risultatoBreva');
 
             if(isNaN(peso) || peso <= 0) { 
-                risultatoDiv.textContent="?? Inserisci un peso valido."; 
+                risultatoDiv.textContent="⚠️ Inserisci un peso valido."; 
                 risultatoDiv.classList.remove('hidden'); 
                 return; 
             }
@@ -965,7 +934,7 @@ function calcolaParametriVitali() {
             const maxDose = 10;
 
             if(isNaN(peso) || peso <= 0) { 
-                risultatoDiv.textContent="?? Inserisci un peso valido."; 
+                risultatoDiv.textContent="⚠️ Inserisci un peso valido."; 
                 risultatoDiv.classList.remove('hidden'); 
                 return; 
             }
@@ -974,7 +943,7 @@ function calcolaParametriVitali() {
             let doseFinale = Math.min(doseCalcolata, maxDose);
             let nota = doseCalcolata > maxDose ? ` (Dose massima ${maxDose} mg applicata)` : '';
             
-            risultatoDiv.textContent = `? Dose Diazepam: ${doseFinale.toFixed(2)} mg EV/Rettale${nota}`;
+            risultatoDiv.textContent = `💉 Dose Diazepam: ${doseFinale.toFixed(2)} mg EV/Rettale${nota}`;
             risultatoDiv.classList.remove('hidden');
         }
 
@@ -985,13 +954,13 @@ function calcolaParametriVitali() {
             const fattoreDose = 1; // 1 mcg/kg
 
             if(isNaN(peso) || peso <= 0) { 
-                risultatoDiv.textContent="?? Inserisci un peso valido.";
+                risultatoDiv.textContent="⚠️ Inserisci un peso valido.";
                 risultatoDiv.classList.remove('hidden'); 
                 return; 
             }
 
             let dose = peso * fattoreDose;
-            risultatoDiv.textContent = `? Dose Fentanile: ${dose.toFixed(1)} mcg EV/IO`;
+            risultatoDiv.textContent = `💉 Dose Fentanile: ${dose.toFixed(1)} mcg EV/IO`;
             risultatoDiv.classList.remove('hidden');
         }
 
@@ -1002,7 +971,7 @@ function calcolaParametriVitali() {
             let dose;
 
             if(isNaN(peso) || peso <= 0) { 
-                risultatoDiv.textContent="?? Inserisci un peso valido."; 
+                risultatoDiv.textContent="⚠️ Inserisci un peso valido."; 
                 risultatoDiv.classList.remove('hidden'); 
                 return; 
             }
@@ -1012,13 +981,13 @@ function calcolaParametriVitali() {
             } else if (peso >= 25) { 
                 dose = 1;
             } else { 
-                dose = "Non applicabile per peso cos� basso (< 5 kg)";
+                dose = "Non applicabile per peso così basso (< 5 kg)";
             }
 
             if (typeof dose === 'number') { 
-                risultatoDiv.textContent = `? Dose Glucagone: ${dose.toFixed(1)} mg IM`;
+                risultatoDiv.textContent = `💉 Dose Glucagone: ${dose.toFixed(1)} mg IM`;
             } else { 
-                risultatoDiv.textContent = `?? ${dose}`; 
+                risultatoDiv.textContent = `⚠️ ${dose}`; 
             }
             risultatoDiv.classList.remove('hidden'); 
         }
@@ -1031,7 +1000,7 @@ function calcolaParametriVitali() {
             const maxDose = 200;
 
             if(isNaN(peso) || peso <= 0) { 
-                risultatoDiv.textContent="?? Inserisci un peso valido."; 
+                risultatoDiv.textContent="⚠️ Inserisci un peso valido."; 
                 risultatoDiv.classList.remove('hidden'); 
                 return; 
             }
@@ -1040,7 +1009,7 @@ function calcolaParametriVitali() {
             let doseFinale = Math.min(doseCalcolata, maxDose);
             let nota = doseCalcolata > maxDose ? ` (Dose massima ${maxDose} mg applicata)` : '';
             
-            risultatoDiv.textContent = `? Dose Idrocortisone: ${doseFinale.toFixed(0)} mg EV/IM${nota}`;
+            risultatoDiv.textContent = `💉 Dose Idrocortisone: ${doseFinale.toFixed(0)} mg EV/IM${nota}`;
             risultatoDiv.classList.remove('hidden');
         }
 
@@ -1072,7 +1041,7 @@ function calcolaParametriVitali() {
             const risultatoDiv = document.getElementById(uso === 'analgesia' ? 'risultatoKetaminaAnalgesia' : 'risultatoKetaminaSedazione');
 
             if(isNaN(peso) || peso <= 0) {
-                risultatoDiv.textContent="?? Inserisci un peso valido.";
+                risultatoDiv.textContent="⚠️ Inserisci un peso valido.";
                 risultatoDiv.classList.remove('hidden');
                 return;
             }
@@ -1094,7 +1063,7 @@ function calcolaParametriVitali() {
 
             let doseFinaleMin = peso * doseMin;
             let doseFinaleMax = peso * doseMax;
-            risultatoDiv.innerHTML = `? Range Dose Ketamina (${viaMsg}): ${doseFinaleMin.toFixed(1)} - ${doseFinaleMax.toFixed(1)} mg`;
+            risultatoDiv.innerHTML = `💉 Range Dose Ketamina (${viaMsg}): ${doseFinaleMin.toFixed(1)} - ${doseFinaleMax.toFixed(1)} mg`;
             risultatoDiv.classList.remove('hidden');
         }
         
@@ -1105,13 +1074,13 @@ function calcolaParametriVitali() {
             const fattoreDose = 1; // 1 mg/kg
             
             if(isNaN(peso) || peso <= 0) { 
-                risultatoDiv.textContent="?? Inserisci un peso valido."; 
+                risultatoDiv.textContent="⚠️ Inserisci un peso valido."; 
                 risultatoDiv.classList.add('hidden');
                 return; 
             } 
             
             let dose = peso * fattoreDose; 
-            risultatoDiv.textContent = `? Dose Lidocaina: ${dose.toFixed(1)} mg EV`; 
+            risultatoDiv.textContent = `💉 Dose Lidocaina: ${dose.toFixed(1)} mg EV`; 
             risultatoDiv.classList.remove('hidden'); 
         }
         
@@ -1124,7 +1093,7 @@ function calcolaLiquidi() {
 
     // Controllo di validazione
     if (isNaN(peso) || peso <= 0) {
-        risultatoDiv.innerHTML = "?? Inserisci un peso valido (kg).";
+        risultatoDiv.innerHTML = "⚠️ Inserisci un peso valido (kg).";
         risultatoDiv.classList.remove('hidden');
         return;
     }
@@ -1134,7 +1103,7 @@ function calcolaLiquidi() {
 
     // Output del risultato
     risultatoDiv.innerHTML = `
-        ? Dose Bolo Liquidi (20 mL/kg)
+        💧 Dose Bolo Liquidi (20 mL/kg)
         <br>
         <span style="font-size: 20px; font-weight: 800; color: black; 1px 1px 2px black;">${dose.toFixed(0)} mL</span>
         <br>
@@ -1151,7 +1120,7 @@ function calcolaLiquidi() {
             const risultatoDiv = document.getElementById('risultatoMetilprednisolone');
 
             if(isNaN(peso) || peso <= 0 || isNaN(eta) || eta < 0) { 
-                risultatoDiv.textContent="?? Inserisci peso ed et� validi.";
+                risultatoDiv.textContent="⚠️ Inserisci peso ed età validi.";
                 risultatoDiv.classList.remove('hidden'); 
                 return; 
             }
@@ -1173,7 +1142,7 @@ function calcolaLiquidi() {
             let doseFinale = Math.min(doseCalcolata, maxDose);
             let nota = doseCalcolata > maxDose ? ` (Dose max ${maxDose} mg applicata)` : '';
             
-            risultatoDiv.textContent = `? Dose Metilprednisolone: ${doseFinale.toFixed(0)} mg EV${nota}`; 
+            risultatoDiv.textContent = `💉 Dose Metilprednisolone: ${doseFinale.toFixed(0)} mg EV${nota}`; 
             risultatoDiv.classList.remove('hidden'); 
         }
 
@@ -1249,7 +1218,7 @@ function calcolaLiquidi() {
             const risultatoDiv = document.getElementById(risultatoDivId);
 
             if(isNaN(peso) || peso <= 0) { 
-                risultatoDiv.textContent="?? Inserisci un peso valido."; 
+                risultatoDiv.textContent="⚠️ Inserisci un peso valido."; 
                 risultatoDiv.classList.remove('hidden'); 
                 return; 
             }
@@ -1271,10 +1240,10 @@ function calcolaLiquidi() {
 
             if (perNarice && via === 'in') {
                 let dosePerNarice = doseFinaleMin / 2;
-                risultatoDiv.innerHTML = `? Dose Midazolam (${viaMsg}): ${doseDisplay} ${nota}<br><br>
+                risultatoDiv.innerHTML = `💉 Dose Midazolam (${viaMsg}): ${doseDisplay} ${nota}<br><br>
                                         Somministra: ${dosePerNarice.toFixed(2)} mg per narice.`;
             } else {
-                 risultatoDiv.textContent = `? Dose Midazolam (${viaMsg}): ${doseDisplay}${nota}`;
+                 risultatoDiv.textContent = `💉 Dose Midazolam (${viaMsg}): ${doseDisplay}${nota}`;
             }
             
             risultatoDiv.classList.remove('hidden');
@@ -1287,13 +1256,13 @@ function calcolaLiquidi() {
             const fattoreDose = 0.1; // 0,1 mg/kg
 
             if(isNaN(peso) || peso <= 0) { 
-                risultatoDiv.textContent="?? Inserisci un peso valido.";
+                risultatoDiv.textContent="⚠️ Inserisci un peso valido.";
                 risultatoDiv.classList.remove('hidden'); 
                 return; 
             }
 
             let dose = peso * fattoreDose;
-            risultatoDiv.textContent = `? Dose Morfina: ${dose.toFixed(2)} mg EV`;
+            risultatoDiv.textContent = `💉 Dose Morfina: ${dose.toFixed(2)} mg EV`;
             risultatoDiv.classList.remove('hidden');
         }
 
@@ -1305,7 +1274,7 @@ function calcolaLiquidi() {
             const fialaDose = 0.4; // 1 fiala = 0,4 mg
 
             if(isNaN(peso) || peso <= 0) { 
-                risultatoDiv.textContent="?? Inserisci un peso valido."; 
+                risultatoDiv.textContent="⚠️ Inserisci un peso valido."; 
                 risultatoDiv.classList.remove('hidden'); 
                 return; 
             }
@@ -1318,7 +1287,7 @@ function calcolaLiquidi() {
                 nota = ` (Dose massima iniziale 1 fiala/0,4 mg applicata)`;
             }
             
-            risultatoDiv.textContent = `? Dose Naloxone: ${doseFinale.toFixed(2)} mg IM/IN/EV${nota}`;
+            risultatoDiv.textContent = `💉 Dose Naloxone: ${doseFinale.toFixed(2)} mg IM/IN/EV${nota}`;
             risultatoDiv.classList.remove('hidden');
         }
 
@@ -1328,7 +1297,7 @@ function calcolaLiquidi() {
             const risultatoDiv = document.getElementById('risultatoParacetamolo');
 
             if(isNaN(peso) || peso <= 0) { 
-                risultatoDiv.textContent="?? Inserisci un peso valido."; 
+                risultatoDiv.textContent="⚠️ Inserisci un peso valido."; 
                 risultatoDiv.classList.remove('hidden'); 
                 return; 
             }
@@ -1346,7 +1315,7 @@ function calcolaLiquidi() {
 
             let dose = peso * doseKg;
 
-            risultatoDiv.textContent = `? Dose Paracetamolo (${fascia}): ${dose.toFixed(0)} mg EV`;
+            risultatoDiv.textContent = `💉 Dose Paracetamolo (${fascia}): ${dose.toFixed(0)} mg EV`;
             risultatoDiv.classList.remove('hidden');
         }
 
@@ -1358,14 +1327,14 @@ function calcolaLiquidi() {
             const doseMax = 1.2; // mg/kg
 
             if (isNaN(peso) || peso <= 0) {
-                risultatoDiv.textContent = "?? Inserisci un peso valido.";
+                risultatoDiv.textContent = "⚠️ Inserisci un peso valido.";
                 risultatoDiv.classList.remove('hidden');
                 return;
             }
 
             const doseFinaleMin = peso * doseMin;
             const doseFinaleMax = peso * doseMax;
-            risultatoDiv.textContent = `? Range Dose Rocuronio: ${doseFinaleMin.toFixed(1)} - ${doseFinaleMax.toFixed(1)} mg EV`;
+            risultatoDiv.textContent = `💉 Range Dose Rocuronio: ${doseFinaleMin.toFixed(1)} - ${doseFinaleMax.toFixed(1)} mg EV`;
             risultatoDiv.classList.remove('hidden');
         }
 
@@ -1377,7 +1346,7 @@ function calcolaLiquidi() {
             const doseMax = 2; // mg/kg
 
             if (isNaN(peso) || peso <= 0) {
-                risultatoDiv.textContent = "?? Inserisci un peso valido.";
+                risultatoDiv.textContent = "⚠️ Inserisci un peso valido.";
                 risultatoDiv.classList.remove('hidden');
                 return;
             }
@@ -1385,11 +1354,11 @@ function calcolaLiquidi() {
             const doseMinTot = peso * doseMin;
             const doseMaxTot = peso * doseMax;
 
-            risultatoDiv.textContent = `? Range Dose Succinilcolina: ${doseMinTot.toFixed(1)} - ${doseMaxTot.toFixed(1)} mg EV`;
+            risultatoDiv.textContent = `💉 Range Dose Succinilcolina: ${doseMinTot.toFixed(1)} - ${doseMaxTot.toFixed(1)} mg EV`;
             risultatoDiv.classList.remove('hidden');
         }
 
-        // --- ELETTRICIT� ---
+        // --- ELETTRICITÀ ---
         function nascondiTipiElettricita() { 
             document.getElementById('defibrillazioneElettricita').classList.add('hidden'); 
             document.getElementById('cardioversioneElettricita').classList.add('hidden'); 
@@ -1412,7 +1381,7 @@ function calcolaLiquidi() {
             const peso = parseFloat(document.getElementById('pesoDefibrillazione').value);
             const risultatoDiv = document.getElementById('risultatoDefibrillazione'); 
             if(isNaN(peso) || peso <= 0) { 
-                risultatoDiv.textContent="?? Inserisci un peso valido."; 
+                risultatoDiv.textContent="⚠️ Inserisci un peso valido."; 
                 risultatoDiv.classList.add('hidden'); 
                 return;
             }  
@@ -1422,11 +1391,11 @@ function calcolaLiquidi() {
     const dose4 = Math.round(peso * 8); // 8 J/kg
     const dose5 = Math.round(peso * 10); // 10 J/kg
             risultatoDiv.innerHTML = `
-                1� Scarica: ${dose1} J (2 J/kg)<br>
-                2� Scarica: ${dose2} J (4 J/kg)<br>
-    3� Scarica: ${dose3} J (6 J/kg)<br>
-    4� Scarica: ${dose4} J (8 J/kg)<br>
-    5� Scarica: ${dose5} J (10 J/kg)<br>
+                1ª Scarica: ${dose1} J (2 J/kg)<br>
+                2ª Scarica: ${dose2} J (4 J/kg)<br>
+    3° Scarica: ${dose3} J (6 J/kg)<br>
+    4° Scarica: ${dose4} J (8 J/kg)<br>
+    5° Scarica: ${dose5} J (10 J/kg)<br>
             `;
             risultatoDiv.classList.remove('hidden');
         }
@@ -1434,7 +1403,7 @@ function calcolaLiquidi() {
             const peso = parseFloat(document.getElementById('pesoCardioversione').value);
             const risultatoDiv = document.getElementById('risultatoCardioversione');
             if(isNaN(peso) || peso <= 0) {
-                risultatoDiv.textContent="?? Inserisci un peso valido.";
+                risultatoDiv.textContent="⚠️ Inserisci un peso valido.";
                 risultatoDiv.classList.add('hidden');
                 return;
             }
@@ -1442,8 +1411,8 @@ function calcolaLiquidi() {
             const dose1Max = Math.round(peso * 1);   // 1 J/kg
             const dose2 = Math.round(peso * 2);      // 2 J/kg
             risultatoDiv.innerHTML = `
-                1� Scarica: ${dose1Min} - ${dose1Max} J (0,5 - 1 J/kg)<br>
-                2� Scarica: ${dose2} J (2 J/kg)
+                1ª Scarica: ${dose1Min} - ${dose1Max} J (0,5 - 1 J/kg)<br>
+                2ª Scarica: ${dose2} J (2 J/kg)
             `;
             risultatoDiv.classList.remove('hidden');
         }
@@ -1451,10 +1420,4 @@ function calcolaLiquidi() {
     </script>
 </body>
 </html>
-
-
-
-
-
-
 
